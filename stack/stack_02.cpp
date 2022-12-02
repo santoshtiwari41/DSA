@@ -42,9 +42,10 @@ int main(){
   stack s(5);
   s.push(4);
   s.push(6);
-  cout<<s.peek();
-  s.pop();
-  cout<<s.peek();
+  s.push(4);
+  s.push(5);
+  s.push(6);
+  s.push(7);
   return 0;
 
 }
