@@ -1,4 +1,14 @@
 #include <iostream>
+#include<string.h>
+#include <stdlib.h>
+string reverse( string strr)
+{
+    for (int i = strr.length() - 1; i >= 0; i--){
+     return strr[i];
+    }
+       
+}
+ 
 using namespace std;
 class stack
 {
@@ -17,8 +27,7 @@ public:
     {
         if (top == size - 1)
         {
-            cout << endl
-                 << "stack overflow";
+            cout << endl<< "stack overflow";
         }
         else
         {
@@ -76,14 +85,15 @@ public:
 int main()
 {
     stack s(10);
-    string result, str;
+    string result, str1,str2;
     
     cout << endl<< "enter your string : ";
-    cin >> str;
-
-    for (int i = 0; i < str.length(); i++)
+    cin >> str1;
+    str2=reverse(str1);
+    
+    for (int i = 0; i < str2.length(); i++)
     {
-        char c = str[i];
+        char c = str2[i];
 
         if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
             result += c;
@@ -103,7 +113,7 @@ int main()
 
         else
         {
-            while (!s.empty() && s.priority(str[i]) <= s.priority(s.peak()))
+            while (!s.empty() && s.priority(str2[i]) <= s.priority(s.peak()))
             {
                 result += s.peak();
                 s.pop();
