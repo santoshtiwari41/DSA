@@ -1,12 +1,10 @@
 #include <iostream>
 #include<string.h>
 #include <stdlib.h>
-string reverse( string strr)
+string reverse(string str)
 {
-    for (int i = strr.length() - 1; i >= 0; i--){
-     return strr[i];
-    }
-       
+    for (int i = str.length() - 1; i >= 0; i--)
+        return str[i];
 }
  
 using namespace std;
