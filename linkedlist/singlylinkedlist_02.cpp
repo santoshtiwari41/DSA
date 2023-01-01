@@ -54,6 +54,12 @@ void insertAtGivenPosition(node* &head,int data,int pos){
         head=newNode;
         return;
     }
+    else if(pos==1){
+        node* newNode=new node(data);
+    newNode->data=data;
+    newNode->next=head;
+    head=newNode;
+    }
     else{
      node* temp=head;
     
@@ -79,4 +85,5 @@ int main(){
     display(head);
     insertAtGivenPosition(head,10,1);
     display(head);
+    return 0;
 }
