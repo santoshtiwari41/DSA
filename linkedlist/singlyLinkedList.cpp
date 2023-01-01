@@ -11,19 +11,19 @@ void insertAtBeginning(node** head,int newData){
     newNode->next=(*head);
     (*head)=newNode;
 }
-void deleteAtBeginning(node* head){
-node* temp;
-temp=head;
-head=head->next;
-delete temp;
+void deleteAtBeginning(node* &Head){
+node* Temp;
+Temp=Head;
+Head=Head->next;
+delete Temp;
 
 }
-void insertAtEnd(node** head,int newData){
+void insertAtEnd(node* &head,int newData){
     node* temp;
     node* newNode=new node();
     
-    temp=(*head);
-    while(temp!=NULL){
+    temp=head;
+    while(temp->next!=NULL){
         temp=temp->next;
     } 
     newNode->next=NULL;
@@ -48,7 +48,7 @@ int main(){
     insertAtBeginning(&head,15);
     insertAtBeginning(&head,5);
     deleteAtBeginning(head);
-    insertAtEnd(&head,50);
+    insertAtEnd(head,50);
     
     display(head);
     return 0;
